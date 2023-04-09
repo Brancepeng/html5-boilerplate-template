@@ -1,7 +1,7 @@
 <!doctype html>
 <!--声明文档类型是HTML5,告诉浏览器将这个文件视为 HTML5 文档,文档类型声明必须是 HTML 文
   档中的第一行,-->
-  
+
 <html class="no-js" lang="en">
 <!--class 属性被设置为 no-js，通常用于检测 JavaScript 是否可用。如果浏览器支持 JavaScript，那
   么 JavaScript 会在页面加载完成后将 class 属性的值从 no-js 更改为 js，开发人员可以利
@@ -12,24 +12,51 @@
   同 JavaScript 支持情况下的代码。-->
 
 <head>
+  <!--
+    在页面加载完成的时候，HTML 文档中的头部是不会显示在 web 浏览器的。它包含了诸如页面
+    的 <title>（标题）、指向 CSS 的链接（如果你选择用 CSS 来为 HTML 内容添加样式）、
+      指向自定义网页图标的链接和其他的元数据（描述 HTML 的数据，比如作者和描述文档的重
+      要关键词）等信息。Web 浏览器将使用文档头部的信息正确渲染 HTML 文档.
+    
+    <head>标签内元素标签用于定于元数据,元数据是描述 HTML 的数据，比如作者和描述文档的重要关键词.
+      HTML 有一个“官方的”方式来为一个文档添加元数据——<meta> 元素.当然head内部其他元素也是定义元数据的.
+  -->
   <meta charset="utf-8">
-  <!--<meta>标签用于指定 HTML 文档的字符编码方式,charset 属性的值被设置为 utf-8，表示该文档使用 UTF-8 字符编码方式。-->
+  <!--
+   <meta> 标签用于在文档头部嵌入元数据（metadata），元数据是描述数据的数据。这些数据通常是关于文档的信息，如文档的标题、作者、
+   关键词、描述等。使用 <meta> 标签来定义这些元数据，可以帮助搜索引擎更好地理解和解析文档.-->
 
   <title>HTML5标签学习</title>
-
+  <!-- <title> 标签，它被用来定义 HTML 文档的标题。文档标题显示在浏览器的标签页上，也显示在收藏夹中，是
+    网站的重要元素之一-->
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- viewport属性指定浏览器窗口的视口大小和缩放比例。-->
 
   <meta property="og:title" content="">
+  <!--
+    og 是指 Open Graph 协议，是一种用于定义网页内容的元数据协议。当一个网页被分享到
+    社交媒体平台时，Open Graph 协议可以帮助社交媒体平台获取网页的元数据信息，包括标
+    题、描述、图片等，以便更好地展示和分享该网页。og:title 表示该元数据用于指定分享时
+    使用的标题。在 HTML 中，通常使用 meta 标签来定义这些元数据信息。
+  -->
   <meta property="og:type" content="">
   <meta property="og:url" content="">
+
   <meta property="og:image" content="">
 
   <link rel="manifest" href="site.webmanifest">
+  <!--用于指定应用程序的 Web App Manifest 文件的链接。Web App Manifest 文件是一
+    个 JSON 文件，它提供了有关应用程序的元数据和配置信息，例如应用程序的名称、图标、主
+    题颜色、起始 URL 等。-->
+
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
+  <!--rel="apple-touch-icon" 属性告诉浏览器这个链接是适用于 iOS 设备的 Web 应用
+    程序的自定义图标。这个链接可以指向任何适合的图像格式，比如 PNG、JPEG 或 GIF 等。-->
 
   <link rel="stylesheet" href="css/normalize.css">
+
   <link rel="stylesheet" href="css/main.css">
 
   <meta name="theme-color" content="#fafafa">
@@ -39,7 +66,63 @@
 
   <!-- Add your site or application content here -->
   <p>Hello world! This is HTML5 Boilerplate.</p>
+  <!--
+      在HTML 中有两种你需要知道的重要元素类别，块级元素和内联元素。
+
+      块级元素在页面中以块的形式展现。一个块级元素出现在它前面的内容之后的新行上。任
+      何跟在块级元素后面的内容也会出现在新的行上。块级元素通常是页面上的结构元素。例如，
+      一个块级元素可能代表标题、段落、列表、导航菜单或页脚。一个块级元素不会嵌套在一个
+      内联元素里面，但它可能嵌套在另一个块级元素里面。
+
+      内联元素通常出现在块级元素中并环绕文档内容的一小部分，而不是一整个段落或者一组内容。
+      内联元素不会导致文本换行。它通常与文本一起使用，例如，<a> 元素创建一个超链接，
+        <em> 和 <strong> 等元素创建强调。
+  -->
   <p>my cat is <strong>very</strong><em> grumpy</em>.</p>
+  <em>第一</em><em>第二</em><em>第三</em>
+
+  <p>第四<em>1文本</em><em>2</em><em>3</em></p>
+  <p>第五</p>
+  <p>第六</p>
+
+  <img
+    src="https://roy-tian.github.io/learning-area/extras/getting-started-web/beginner-html-site/images/firefox-icon.png"
+    alt="Firefox 图标">
+  <!--
+    img标签用于插入一张图像,src属性指定了该图像的 URL，alt 属性提供了一个替代文本，用于在图像无法正常显示时提供说明信息。
+  
+  -->
+  <p>A link to my <a href="https://www.mozilla.org/" title="The Mozilla homepage" target="_blank">favorite website</a>.
+  </p>
+
+  <!--
+    href 属性指定了链接的目标 URL,ttitle 属性提供了一个提示，告诉用户该链接指向的是什么,arget 属性指定了该链接应该在哪个窗口或标签中打开。
+  -->
+
+  <input type="text" disabled="disabled" />
+  <input type="text" disabled />
+  <input type="text" />
+  <!--
+    上面input标签属性disabled没有值,这也是完全可以接受的。这些属性被称为布尔属性。布尔
+    属性只能有一个值，这个值一般与属性名称相同。
+
+  -->
+
+  <h1>经典回忆</h1>
+  <p>
+    相思无用，惟别而已。别期若有定，千般煎熬又何如？莫道黯然销魂，何处<strong>柳暗花明</strong>？<br>
+    ——《<a href="https://zh.wikipedia.org/zh-hans/神鵰俠侶">神雕侠侣</a>》
+  </p>
+  <img src="https://roy-tian.github.io/learning-area/extras/tools/playable-code/images/sdxl.jfif" alt="《神雕侠侣》作品图片">
+
+  <p>HTML 中用 &lt;p&gt; 来定义段落元素</p>
+  <!--
+    上面的&lt;表示<,如果你真的想要在文本中使用符号 & 或者小于号或者<，而不想让它们被浏览器视为代码并被解释,
+    那就使用这些字符的实体引用,比如 &lt; 对应 < 
+
+  -->
+
+
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
