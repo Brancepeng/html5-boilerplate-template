@@ -119,17 +119,17 @@
   <h1>三国演义</h1>
 
   <p>罗贯中</p>
-  
+
   <h2>第一回 宴桃园豪杰三结义 斩黄巾英雄首立功</h2>
-  
+
   <p>话说天下大势，分久必合，合久必分。周末七国分争，并入于秦。及秦灭之后，楚、汉分争，又并入于汉……</p>
-  
+
   <h2>第二回 张翼德怒鞭督邮 何国舅谋诛宦竖</h2>
-  
+
   <p>且说董卓字仲颖，陇西临洮人也，官拜河东太守，自来骄傲。当日怠慢了玄德，张飞性发，便欲杀之……</p>
-  
+
   <h3>却说张飞</h3>
-  
+
   <p>却说张飞饮了数杯闷酒，乘马从馆驿前过，见五六十个老人，皆在门前痛哭。飞问其故，众老人答曰：“督邮逼勒县吏，欲害刘公；我等皆来苦告，不得放入，反遭把门人赶打！”……</p>
 
   <h1>经典回忆</h1>
@@ -168,7 +168,7 @@
     <li>豆汁</li>
     <li>焦圈</li>
   </ul>
- 
+
   <ol>
     <li>沿这条路走到头</li>
     <li>右转</li>
@@ -176,7 +176,7 @@
     <li>在第三个十字路口处左转</li>
     <li>继续走 300 米，学校就在你的右手边</li>
   </ol>
-<!--
+  <!--
   下面是嵌套列表
 -->
   <ol>
@@ -191,7 +191,7 @@
     </li>
   </ol>
 
- <!--
+  <!--
   在 HTML 中我们用 <strong>（strong importance）元素来标记这样的情况。除了使文档更有
     用之外，也可以被屏幕阅读器识别，并以不同的语调发出。浏览器默认样式为粗体，但你不应该
     纯粹为了获得粗体风格而使用这个标签。为了获得粗体样式，你应该使用 <span> 元素和一些 CSS，或者是 <b> 元素（见下文）。
@@ -223,11 +223,13 @@
     本页面底部可以找到<a href="#Mailing_address">公司邮寄地址</a>。
   </p>
   <h2 id="Mailing_address">邮寄地址</h2>
-<!--
+  <!--
   链接的title属性仅当鼠标悬停在其上时才会显示，这意味着使用键盘来导航网页的人很难获取到标题信息。如果标题信息对于页
   面非常重要，你应该使用所有用户能都方便获取的方式来呈现，例如放在常规文本中。
 -->
-  <a href="https://developer.mozilla.org/zh-CN/"><h2>MDN文档</h2></a>
+  <a href="https://developer.mozilla.org/zh-CN/">
+    <h2>MDN文档</h2>
+  </a>
 
   <a href="https://developer.mozilla.org/zh-CN/">
     <img src="mdn_logo.svg" alt="MDN Web 文档主页" />
@@ -238,6 +240,84 @@
   <p>
     如有错误，请访问我们的<a href="404.html">联系人页面</a>。
   </p>
+
+  <!-- 第三种类型的列表——描述列表（description list）。这种列表的目的是标记一组项目及其相关
+  描述，例如术语和定义，或者是问题和答案等。让我们看一组术语和定义的示例：
+  描述列表用dl标签,每个项目或者术语用dt标签,具体描述用dd标签.
+-->
+  <dl>
+    <dt>内心独白</dt>
+    <dd>戏剧中，某个角色对自己的内心活动或感受进行念白表演，这些台词只面向观众，而其他角色不会听到。</dd>
+    <dt>语言独白</dt>
+    <dd>戏剧中，某个角色把自己的想法直接进行念白表演，观众和其他角色都可以听到。</dd>
+    <dt>旁白</dt>
+    <dd>戏剧中，为渲染幽默或戏剧性效果而进行的场景之外的补充注释念白，只面向观众，内容一般都是角色的感受、想法、以及一些背景信息等。</dd>
+  </dl>
+  <!-- 下面是一段引用.浏览器的默认样式会将其呈现为缩进的段落，作为引用的指示； -->
+  <!-- 块级元素引用使用blockquote标签 -->
+  <p>Here is a blockquote:</p>
+  <blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
+    <p>
+      The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or
+      <em>HTML Block Quotation Element</em>) indicates that the enclosed text is
+      an extended quotation.
+    </p>
+  </blockquote>
+
+  <!-- 行内引用时用q标签 -->
+  <p>The quote element — <code>&lt;q&gt;</code> — is <q
+      cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">intended
+      for short quotations that don't require paragraph breaks.</q></p>
+
+
+  <!--下面是缩略语  -->
+  <p>
+    我们使用 <abbr title="超文本标记语言（Hyper text Markup Language）">HTML</abbr> 来组织网页文档。
+  </p>
+
+  <p>
+    第 33 届<abbr title="夏季奥林匹克运动会">奥运会</abbr>将于 2024 年 8 月在法国巴黎举行。
+  </p>
+
+  <!-- 地址 -->
+  <address>
+    <p>
+      Chris Mills<br />
+      Manchester<br />
+      The Grim North<br />
+      UK
+    </p>
+  
+    <ul>
+      <li>Tel: 01234 567 890</li>
+      <li>Email: me@grim-north.co.uk</li>
+    </ul>
+  </address>
+
+  <!-- 上标和下标;sub标签为下标,sup为上标 -->
+  <p>
+    咖啡因的化学方程式是
+    C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>。
+  </p>
+  <p>如果 x<sup>2</sup> 的值为 9，那么 x 的值必为 3 或 -3。</p>
+<!-- 标记时间 -->
+  <!-- 标准简单日期 -->
+<p><time datetime="2016-01-20">20 January 2016</time></p>
+<!-- 只包含年份和月份-->
+<p><time datetime="2016-01">January 2016</time></p>
+<!-- 只包含月份和日期 -->
+<p><time datetime="01-20">20 January</time></p>
+<!-- 只包含时间，小时和分钟数 -->
+<p><time datetime="19:30">19:30</time></p>
+<!-- 还可包含秒和毫秒 -->
+<p><time datetime="19:30:01.856">19:30:01.856</time></p>
+<!-- 日期和时间 -->
+<p><time datetime="2016-01-20T19:30">7.30pm, 20 January 2016</time></p>
+<!-- 含有时区偏移值的日期时间 -->
+<p><time datetime="2016-01-20T19:30+01:00">7.30pm, 20 January 2016 is 8.30pm in France</time></p>
+<!-- 提及特定周 -->
+<p><time datetime="2016-W04">The fourth week of 2016</time></p>
+
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
